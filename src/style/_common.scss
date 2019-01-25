@@ -1,10 +1,24 @@
+@font-face {
+    font-family: "MontserratRegular";
+    src: url("../fonts/MontserratRegular.ttf") format("truetype"),
+        url("../font/MontserratRegular.otf") format("opentype");
+}
 * {
     box-sizing: border-box;
 }
+html {
+    font-size: 10px;
+}
 body {
     margin: 0;
+    font-family: "MontserratRegular";
+
 }
 .wrapper {
+    height: 100vh;
     min-width: 1024px;
     min-height: 600px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 12% auto;
 }

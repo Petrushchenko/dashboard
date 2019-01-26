@@ -21,4 +21,16 @@ body {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 12% auto;
+    .container {
+        display: flex;
+        flex-direction: column;
+        grid-column: 2 /span 1;
+
+    }
+}
+a {
+    text-decoration: none;
+}
+p {
+    margin: 0;
 }

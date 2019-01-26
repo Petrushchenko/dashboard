@@ -1,24 +1,5 @@
-%dot {
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background-color: $nav-dots-color;
-    margin: 0 2.5px;
-    display: inline-block;
-}
-%label {
-    position: absolute;
-    content: attr(data-number);
-    text-align: center;
-    line-height: 32px;
-    width: 32px;
-    height: 32px;
-    top: 0;
-    right: 0;
-    border-radius: 50%;
-    color: white;
-    font-weight: bold;
-}
+
+
 .nav {
     grid-column: 1 / span 1;
     background-color: $nav-background-color;
@@ -38,7 +19,6 @@
             @extend %label;
             background-color:$red-color;
             transform: translate(25%, -25%);
-
         }
     }
     &__separator {
@@ -65,7 +45,6 @@
         padding: 15px 0;
         a {
             color: $nav-text-color;
-            text-decoration: none;
             width: 100%;
             display: block;
             text-align: center;

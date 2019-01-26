@@ -1,0 +1,49 @@
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background-color: $header-background-color;
+    div {
+        display: flex;
+        align-items: center;
+        &:first-child {
+            svg {
+                path {
+                    fill: $red-color;
+                }
+            }
+        }     
+        &:last-child {
+            svg {
+                path {
+                    fill: $green-color;
+                }
+            }
+           
+        }
+    }
+    &__btn {
+        @extend %btn;
+        &:hover {
+            background-color: $red-color;
+        }
+        &-uppercase {
+            @extend %btn;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            &:hover {
+                background-color: $green-color;
+            }
+            p {
+                margin: 0 0 0 10px;
+            }
+            svg {
+                path {
+                    fill: $header-borders-color;
+                }
+            }
+        }
+    }
+}

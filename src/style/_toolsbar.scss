@@ -1,0 +1,64 @@
+.toolsbar {
+    padding-right: 100px;
+    border-top: 1px solid $tabs-border-color; 
+    background-color: $header-background-color;
+    & > div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .tabs {
+            list-style-type: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            top: 0;
+            left: 0;
+            &__item {
+                display: inline-block;
+                padding: 25px 70px 25px 40px;
+                background-color: $tabs-background-color;
+                border-right: 1px solid $tabs-border-color;
+                position: relative;
+                &.active {
+                    z-index: 5;
+                    background-color: white;
+                    &::after {
+                        background-color: $nav-label-color;
+                    }
+                }
+                &:last-child {
+                    border-radius: 0 4px 0 0;
+                }
+                &::after {
+                    @extend %label;
+                    z-index: 10;
+                    background-color:$red-color;
+                    transform: translate(-50%, 25%);
+                }
+                a {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    align-items: center;
+                    color: $header-text-color;
+                    p { 
+                        margin: 0 0 0 15px;
+                        font-weight: 600;
+                        font-size: 2.4rem;
+
+                    }
+                }
+            }
+            svg {
+                path {
+                    fill: $tabs-icon-color;
+                }
+            }
+        }
+        & > p {
+            @extend %text;
+        }
+    }
+
+}

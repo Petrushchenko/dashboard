@@ -38,6 +38,8 @@ function openCloseAddInfo(e) {
             if (isOpen) {
                 let ul = childrenElements.filter(el => el.tagName === "UL")[0];
                 parent.removeChild(ul);
+
+                svg.style.transform = "rotate(0deg)";
      
             } else {
                 

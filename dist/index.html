@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>IDAP</title>
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/simple-scrollbar.css">
+
 </head>
 
 <body>
@@ -53,7 +55,7 @@
         <li class="menu__item">
           <a href="#" data-number="">
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 1024 1024">
-            <g id="icomoon-ignore">
+              <g id="icomoon-ignore">
               </g>
               <path d="M831.84 610.176h-42.368c-6.88 24.928-16.736 48.576-29.376 70.496l39.168 39.136c25.056 25.056 25.056 65.696 0 90.752l-22.688 22.688c-25.056 25.056-65.696 25.056-90.752 0l-39.424-39.392c-21.856 12.448-45.408 22.144-70.208 28.896v41.088c0 35.424-28.704 64.16-64.16 64.16h-32.064c-35.424 0-64.192-28.704-64.192-64.16v-41.088c-24.768-6.752-48.352-16.48-70.208-28.896l-39.392 39.392c-25.024 25.056-65.664 25.056-90.72 0l-22.72-22.688c-25.056-25.056-25.056-65.696 0-90.752l39.168-39.136c-12.64-21.952-22.496-45.568-29.408-70.496h-42.336c-35.456 0-64.16-28.704-64.16-64.128v-32.096c0-35.424 28.704-64.16 64.16-64.16h41.856c6.624-24.672 16.096-48.16 28.384-69.952l-37.664-37.632c-25.056-25.056-25.056-65.696 0-90.752l22.688-22.656c25.056-25.056 65.696-25.056 90.72 0l36.896 36.896c22.592-13.152 46.976-23.392 72.704-30.4v-43.136c0.032-35.456 28.8-64.16 64.224-64.16h32.064c35.424 0 64.16 28.704 64.16 64.16v43.104c25.792 7.040 50.144 17.28 72.704 30.432l36.896-36.896c25.056-25.056 65.696-25.056 90.752 0l22.688 22.656c25.056 25.056 25.056 65.696 0 90.752l-37.632 37.632c12.288 21.792 21.76 45.28 28.416 69.984h41.856c35.424 0 64.16 28.736 64.16 64.16v32.096c-0.032 35.392-28.736 64.096-64.192 64.096zM496 354.56c-97.44 0-176.448 79.008-176.448 176.448s79.008 176.448 176.448 176.448 176.448-79.008 176.448-176.448-79.008-176.448-176.448-176.448zM496 609.184c-44.288 0-80.224-35.872-80.224-80.192 0-44.288 35.936-80.192 80.224-80.192s80.192 35.904 80.192 80.192c0 44.32-35.904 80.192-80.192 80.192z"></path>
             </svg>
@@ -63,7 +65,7 @@
       </ul>
       <ul class="menu-addition">
         <li>
-          <a href="#" >
+          <a href="#" data-number="3">
             <img src="images/upgrade.png">
             <p>Upgrade</p>
           </a>
@@ -141,11 +143,10 @@
             </li>
           </ul>
           <p>Search Project, User, Task etc...</p>
-        </div>
-        
+        </div>        
       </div>
       <div class="content">
-        <main class="main">
+        <main class="main" > 
           <div class="main__header">
             <p>Search a project with Name, Task, User...</p>
             <div>
@@ -168,90 +169,43 @@
               </ul>
             </div>
           </div>
-          <ul class="main__list list">
-            <li class="list__item">
-              <div>
+          <div class="scrollContainer">
+            <div class="scrollbar-container">
+              <div class="scrollbar"></div>
+            </div>        
+            <ul class="main__list list scrollable" >
+              <li class="list__item">
                 <div>
-                  <span>23%</span>
-                  <p>Create Contact Formula</p>
+                  <div>
+                    <span>23%</span>
+                    <p>Create Contact Formula</p>
+                  </div>
+                  <div>
+                    <button type="button" class="main__btn">worlda</button>
+                    <button type="button" class="main__btn-circle">
+                      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 416 448">
+                        <g id="icomoon-ignore">
+                        </g>
+                        <path fill="#000" d="M288 208c0-61.75-50.25-112-112-112s-112 50.25-112 112 50.25 112 112 112 112-50.25 112-112zM416 416c0 17.5-14.5 32-32 32-8.5 0-16.75-3.5-22.5-9.5l-85.75-85.5c-29.25 20.25-64.25 31-99.75 31-97.25 0-176-78.75-176-176s78.75-176 176-176 176 78.75 176 176c0 35.5-10.75 70.5-31 99.75l85.75 85.75c5.75 5.75 9.25 14 9.25 22.5z"></path>
+                      </svg>
+                    </button>
+                    <button type="button" class="main__btn-circle info">
+                      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 640 640">
+                        <g id="icomoon-ignore">
+                        </g>
+                        <path fill="#000" d="M297.376 414.4l22.624 22.624 181.024-181.024-45.248-45.248-135.776 135.744-135.776-135.744-45.248 45.248z"></path>
+                      </svg>
+                    </button>
+                  </div>
                 </div>
+              </li>
+              <li class="list__item">
                 <div>
-                  <button type="button" class="main__btn">worlda</button>
-                  <button type="button" class="main__btn-circle">
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 416 448">
-                      <g id="icomoon-ignore">
-                      </g>
-                      <path fill="#000" d="M288 208c0-61.75-50.25-112-112-112s-112 50.25-112 112 50.25 112 112 112 112-50.25 112-112zM416 416c0 17.5-14.5 32-32 32-8.5 0-16.75-3.5-22.5-9.5l-85.75-85.5c-29.25 20.25-64.25 31-99.75 31-97.25 0-176-78.75-176-176s78.75-176 176-176 176 78.75 176 176c0 35.5-10.75 70.5-31 99.75l85.75 85.75c5.75 5.75 9.25 14 9.25 22.5z"></path>
-                    </svg>
-                  </button>
-                  <button type="button" class="main__btn-circle info">
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 640 640">
-                      <g id="icomoon-ignore">
-                      </g>
-                      <path fill="#000" d="M297.376 414.4l22.624 22.624 181.024-181.024-45.248-45.248-135.776 135.744-135.776-135.744-45.248 45.248z"></path>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-            </li>
-            <li class="list__item">
-              <div>
-                <div>
-                <span>87%</span>
-                <p>Create Subpage PSD</p>
-                </div>
-                <div>
-                <button type="button" class="main__btn">panorama</button>
-                <button type="button" class="main__btn-circle">
-                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 416 448">
-                    <g id="icomoon-ignore">
-                    </g>
-                    <path fill="#000" d="M288 208c0-61.75-50.25-112-112-112s-112 50.25-112 112 50.25 112 112 112 112-50.25 112-112zM416 416c0 17.5-14.5 32-32 32-8.5 0-16.75-3.5-22.5-9.5l-85.75-85.5c-29.25 20.25-64.25 31-99.75 31-97.25 0-176-78.75-176-176s78.75-176 176-176 176 78.75 176 176c0 35.5-10.75 70.5-31 99.75l85.75 85.75c5.75 5.75 9.25 14 9.25 22.5z"></path>
-                  </svg>
-                </button>
-                <button type="button" class="main__btn-circle info">
-                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 640 640">
-                    <g id="icomoon-ignore">
-                    </g>
-                    <path fill="#000" d="M297.376 414.4l22.624 22.624 181.024-181.024-45.248-45.248-135.776 135.744-135.776-135.744-45.248 45.248z"></path>
-                  </svg>
-                </button>
-                </div>
-              </div>
-            </li>
-            <li class="list__item">
-              <div>
-                <div>
-                  <span>83%</span>
-                  <p>Layout & implementation in HTML & CSS</p>
-                </div>
-                <div>
-                  <button type="button" class="main__btn">ebay relaunch</button>
-                  <button type="button" class="main__btn-circle">
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 416 448">
-                      <g id="icomoon-ignore">
-                      </g>
-                      <path fill="#000" d="M288 208c0-61.75-50.25-112-112-112s-112 50.25-112 112 50.25 112 112 112 112-50.25 112-112zM416 416c0 17.5-14.5 32-32 32-8.5 0-16.75-3.5-22.5-9.5l-85.75-85.5c-29.25 20.25-64.25 31-99.75 31-97.25 0-176-78.75-176-176s78.75-176 176-176 176 78.75 176 176c0 35.5-10.75 70.5-31 99.75l85.75 85.75c5.75 5.75 9.25 14 9.25 22.5z"></path>
-                    </svg>
-                  </button>
-                  <button type="button" class="main__btn-circle info">
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 640 640">
-                      <g id="icomoon-ignore">
-                      </g>
-                      <path fill="#000" d="M297.376 414.4l22.624 22.624 181.024-181.024-45.248-45.248-135.776 135.744-135.776-135.744-45.248 45.248z"></path>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-            </li>
-            <li class="list__item" >
-              <div>
-                <div>
-                  <span>23%</span>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  </p>
-                </div>
-                <div>
+                  <div>
+                  <span>87%</span>
+                  <p>Create Subpage PSD</p>
+                  </div>
+                  <div>
                   <button type="button" class="main__btn">panorama</button>
                   <button type="button" class="main__btn-circle">
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 416 448">
@@ -267,89 +221,301 @@
                       <path fill="#000" d="M297.376 414.4l22.624 22.624 181.024-181.024-45.248-45.248-135.776 135.744-135.776-135.744-45.248 45.248z"></path>
                     </svg>
                   </button>
+                  </div>
                 </div>
-              </div>
-            </li>
-            <li class="list__item">
-              <div>
+              </li>
+              <li class="list__item">
                 <div>
-                  <span>98%</span>
-                  <p>Create Contact Formula</p>
+                  <div>
+                    <span>83%</span>
+                    <p>Layout & implementation in HTML & CSS</p>
+                  </div>
+                  <div>
+                    <button type="button" class="main__btn">ebay relaunch</button>
+                    <button type="button" class="main__btn-circle">
+                      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 416 448">
+                        <g id="icomoon-ignore">
+                        </g>
+                        <path fill="#000" d="M288 208c0-61.75-50.25-112-112-112s-112 50.25-112 112 50.25 112 112 112 112-50.25 112-112zM416 416c0 17.5-14.5 32-32 32-8.5 0-16.75-3.5-22.5-9.5l-85.75-85.5c-29.25 20.25-64.25 31-99.75 31-97.25 0-176-78.75-176-176s78.75-176 176-176 176 78.75 176 176c0 35.5-10.75 70.5-31 99.75l85.75 85.75c5.75 5.75 9.25 14 9.25 22.5z"></path>
+                      </svg>
+                    </button>
+                    <button type="button" class="main__btn-circle info">
+                      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 640 640">
+                        <g id="icomoon-ignore">
+                        </g>
+                        <path fill="#000" d="M297.376 414.4l22.624 22.624 181.024-181.024-45.248-45.248-135.776 135.744-135.776-135.744-45.248 45.248z"></path>
+                      </svg>
+                    </button>
+                  </div>
                 </div>
+              </li>
+              <li class="list__item" >
                 <div>
-                  <button type="button" class="main__btn">worlda</button>
-                  <button type="button" class="main__btn-circle">
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 416 448">
-                      <g id="icomoon-ignore">
-                      </g>
-                      <path fill="#000" d="M288 208c0-61.75-50.25-112-112-112s-112 50.25-112 112 50.25 112 112 112 112-50.25 112-112zM416 416c0 17.5-14.5 32-32 32-8.5 0-16.75-3.5-22.5-9.5l-85.75-85.5c-29.25 20.25-64.25 31-99.75 31-97.25 0-176-78.75-176-176s78.75-176 176-176 176 78.75 176 176c0 35.5-10.75 70.5-31 99.75l85.75 85.75c5.75 5.75 9.25 14 9.25 22.5z"></path>
-                    </svg>
-                  </button>
-                  <button type="button" class="main__btn-circle info">
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 640 640">
-                      <g id="icomoon-ignore">
-                      </g>
-                      <path fill="#000" d="M297.376 414.4l22.624 22.624 181.024-181.024-45.248-45.248-135.776 135.744-135.776-135.744-45.248 45.248z"></path>
-                    </svg>
-                  </button>
+                  <div>
+                    <span>23%</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    </p>
+                  </div>
+                  <div>
+                    <button type="button" class="main__btn">panorama</button>
+                    <button type="button" class="main__btn-circle">
+                      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 416 448">
+                        <g id="icomoon-ignore">
+                        </g>
+                        <path fill="#000" d="M288 208c0-61.75-50.25-112-112-112s-112 50.25-112 112 50.25 112 112 112 112-50.25 112-112zM416 416c0 17.5-14.5 32-32 32-8.5 0-16.75-3.5-22.5-9.5l-85.75-85.5c-29.25 20.25-64.25 31-99.75 31-97.25 0-176-78.75-176-176s78.75-176 176-176 176 78.75 176 176c0 35.5-10.75 70.5-31 99.75l85.75 85.75c5.75 5.75 9.25 14 9.25 22.5z"></path>
+                      </svg>
+                    </button>
+                    <button type="button" class="main__btn-circle info">
+                      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 640 640">
+                        <g id="icomoon-ignore">
+                        </g>
+                        <path fill="#000" d="M297.376 414.4l22.624 22.624 181.024-181.024-45.248-45.248-135.776 135.744-135.776-135.744-45.248 45.248z"></path>
+                      </svg>
+                    </button>
+                  </div>
                 </div>
-              </div>
-            </li>
-            <li class="list__item">
-              <div>
+              </li>
+              <li class="list__item">
                 <div>
-                  <span>98%</span>
-                  <p>Create Contact Formula</p>
+                  <div>
+                    <span>98%</span>
+                    <p>Create Contact Formula</p>
+                  </div>
+                  <div>
+                    <button type="button" class="main__btn">worlda</button>
+                    <button type="button" class="main__btn-circle">
+                      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 416 448">
+                        <g id="icomoon-ignore">
+                        </g>
+                        <path fill="#000" d="M288 208c0-61.75-50.25-112-112-112s-112 50.25-112 112 50.25 112 112 112 112-50.25 112-112zM416 416c0 17.5-14.5 32-32 32-8.5 0-16.75-3.5-22.5-9.5l-85.75-85.5c-29.25 20.25-64.25 31-99.75 31-97.25 0-176-78.75-176-176s78.75-176 176-176 176 78.75 176 176c0 35.5-10.75 70.5-31 99.75l85.75 85.75c5.75 5.75 9.25 14 9.25 22.5z"></path>
+                      </svg>
+                    </button>
+                    <button type="button" class="main__btn-circle info">
+                      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 640 640">
+                        <g id="icomoon-ignore">
+                        </g>
+                        <path fill="#000" d="M297.376 414.4l22.624 22.624 181.024-181.024-45.248-45.248-135.776 135.744-135.776-135.744-45.248 45.248z"></path>
+                      </svg>
+                    </button>
+                  </div>
                 </div>
+              </li>
+              <li class="list__item">
                 <div>
-                  <button type="button" class="main__btn">worlda</button>
-                  <button type="button" class="main__btn-circle">
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 416 448">
-                      <g id="icomoon-ignore">
-                      </g>
-                      <path fill="#000" d="M288 208c0-61.75-50.25-112-112-112s-112 50.25-112 112 50.25 112 112 112 112-50.25 112-112zM416 416c0 17.5-14.5 32-32 32-8.5 0-16.75-3.5-22.5-9.5l-85.75-85.5c-29.25 20.25-64.25 31-99.75 31-97.25 0-176-78.75-176-176s78.75-176 176-176 176 78.75 176 176c0 35.5-10.75 70.5-31 99.75l85.75 85.75c5.75 5.75 9.25 14 9.25 22.5z"></path>
-                    </svg>
-                  </button>
-                  <button type="button" class="main__btn-circle info">
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 640 640">
-                      <g id="icomoon-ignore">
-                      </g>
-                      <path fill="#000" d="M297.376 414.4l22.624 22.624 181.024-181.024-45.248-45.248-135.776 135.744-135.776-135.744-45.248 45.248z"></path>
-                    </svg>
-                  </button>
+                  <div>
+                    <span>98%</span>
+                    <p>Create Contact Formula</p>
+                  </div>
+                  <div>
+                    <button type="button" class="main__btn">worlda</button>
+                    <button type="button" class="main__btn-circle">
+                      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 416 448">
+                        <g id="icomoon-ignore">
+                        </g>
+                        <path fill="#000" d="M288 208c0-61.75-50.25-112-112-112s-112 50.25-112 112 50.25 112 112 112 112-50.25 112-112zM416 416c0 17.5-14.5 32-32 32-8.5 0-16.75-3.5-22.5-9.5l-85.75-85.5c-29.25 20.25-64.25 31-99.75 31-97.25 0-176-78.75-176-176s78.75-176 176-176 176 78.75 176 176c0 35.5-10.75 70.5-31 99.75l85.75 85.75c5.75 5.75 9.25 14 9.25 22.5z"></path>
+                      </svg>
+                    </button>
+                    <button type="button" class="main__btn-circle info">
+                      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 640 640">
+                        <g id="icomoon-ignore">
+                        </g>
+                        <path fill="#000" d="M297.376 414.4l22.624 22.624 181.024-181.024-45.248-45.248-135.776 135.744-135.776-135.744-45.248 45.248z"></path>
+                      </svg>
+                    </button>
+                  </div>
                 </div>
-              </div>
-            </li>
-            <li class="list__item">
-              <div>
+              </li>
+              <li class="list__item">
                 <div>
-                  <span>89%</span>
-                  <p>Create Contact Formula</p>
+                  <div>
+                    <span>89%</span>
+                    <p>Create Contact Formula</p>
+                  </div>
+                  <div>
+                    <button type="button" class="main__btn">worlda</button>
+                    <button type="button" class="main__btn-circle">
+                      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 416 448">
+                        <g id="icomoon-ignore">
+                        </g>
+                        <path fill="#000" d="M288 208c0-61.75-50.25-112-112-112s-112 50.25-112 112 50.25 112 112 112 112-50.25 112-112zM416 416c0 17.5-14.5 32-32 32-8.5 0-16.75-3.5-22.5-9.5l-85.75-85.5c-29.25 20.25-64.25 31-99.75 31-97.25 0-176-78.75-176-176s78.75-176 176-176 176 78.75 176 176c0 35.5-10.75 70.5-31 99.75l85.75 85.75c5.75 5.75 9.25 14 9.25 22.5z"></path>
+                      </svg>
+                    </button>
+                    <button type="button" class="main__btn-circle info">
+                      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 640 640">
+                        <g id="icomoon-ignore">
+                        </g>
+                        <path fill="#000" d="M297.376 414.4l22.624 22.624 181.024-181.024-45.248-45.248-135.776 135.744-135.776-135.744-45.248 45.248z"></path>
+                      </svg>
+                    </button>
+                  </div>
                 </div>
+              </li>
+              <li class="list__item">
                 <div>
-                  <button type="button" class="main__btn">worlda</button>
-                  <button type="button" class="main__btn-circle">
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 416 448">
-                      <g id="icomoon-ignore">
-                      </g>
-                      <path fill="#000" d="M288 208c0-61.75-50.25-112-112-112s-112 50.25-112 112 50.25 112 112 112 112-50.25 112-112zM416 416c0 17.5-14.5 32-32 32-8.5 0-16.75-3.5-22.5-9.5l-85.75-85.5c-29.25 20.25-64.25 31-99.75 31-97.25 0-176-78.75-176-176s78.75-176 176-176 176 78.75 176 176c0 35.5-10.75 70.5-31 99.75l85.75 85.75c5.75 5.75 9.25 14 9.25 22.5z"></path>
-                    </svg>
-                  </button>
-                  <button type="button" class="main__btn-circle info">
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 640 640">
-                      <g id="icomoon-ignore">
-                      </g>
-                      <path fill="#000" d="M297.376 414.4l22.624 22.624 181.024-181.024-45.248-45.248-135.776 135.744-135.776-135.744-45.248 45.248z"></path>
-                    </svg>
-                  </button>
+                  <div>
+                    <span>89%</span>
+                    <p>Create Contact Formula</p>
+                  </div>
+                  <div>
+                    <button type="button" class="main__btn">worlda</button>
+                    <button type="button" class="main__btn-circle">
+                      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 416 448">
+                        <g id="icomoon-ignore">
+                        </g>
+                        <path fill="#000" d="M288 208c0-61.75-50.25-112-112-112s-112 50.25-112 112 50.25 112 112 112 112-50.25 112-112zM416 416c0 17.5-14.5 32-32 32-8.5 0-16.75-3.5-22.5-9.5l-85.75-85.5c-29.25 20.25-64.25 31-99.75 31-97.25 0-176-78.75-176-176s78.75-176 176-176 176 78.75 176 176c0 35.5-10.75 70.5-31 99.75l85.75 85.75c5.75 5.75 9.25 14 9.25 22.5z"></path>
+                      </svg>
+                    </button>
+                    <button type="button" class="main__btn-circle info">
+                      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 640 640">
+                        <g id="icomoon-ignore">
+                        </g>
+                        <path fill="#000" d="M297.376 414.4l22.624 22.624 181.024-181.024-45.248-45.248-135.776 135.744-135.776-135.744-45.248 45.248z"></path>
+                      </svg>
+                    </button>
+                  </div>
                 </div>
-              </div>
-            </li>
-          </ul>
+              </li>
+              <li class="list__item">
+                <div>
+                  <div>
+                    <span>89%</span>
+                    <p>Create Contact Formula</p>
+                  </div>
+                  <div>
+                    <button type="button" class="main__btn">worlda</button>
+                    <button type="button" class="main__btn-circle">
+                      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 416 448">
+                        <g id="icomoon-ignore">
+                        </g>
+                        <path fill="#000" d="M288 208c0-61.75-50.25-112-112-112s-112 50.25-112 112 50.25 112 112 112 112-50.25 112-112zM416 416c0 17.5-14.5 32-32 32-8.5 0-16.75-3.5-22.5-9.5l-85.75-85.5c-29.25 20.25-64.25 31-99.75 31-97.25 0-176-78.75-176-176s78.75-176 176-176 176 78.75 176 176c0 35.5-10.75 70.5-31 99.75l85.75 85.75c5.75 5.75 9.25 14 9.25 22.5z"></path>
+                      </svg>
+                    </button>
+                    <button type="button" class="main__btn-circle info">
+                      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 640 640">
+                        <g id="icomoon-ignore">
+                        </g>
+                        <path fill="#000" d="M297.376 414.4l22.624 22.624 181.024-181.024-45.248-45.248-135.776 135.744-135.776-135.744-45.248 45.248z"></path>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="main__footer">
+            <button type="button" class="main__btn-unbordered">Projects Archive
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 640 640">
+                <g id="icomoon-ignore">
+                </g>
+                <path d="M297.376 414.4l22.624 22.624 181.024-181.024-45.248-45.248-135.776 135.744-135.776-135.744-45.248 45.248z"></path>
+              </svg>
+            </button>
+          </div>
         </main>
-        <main class="main hide"></main>
+        <main class="main hide">
+          <Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </Lorem>
+        </main>
         <aside>
-            
+          <div class="scrollContainer">
+            <div class="scrollbar-container">
+              <div class="scrollbar"></div>
+            </div> 
+            <ul class="list scrollable">
+              <li class="list__item">
+                <div class="person"></div>
+                <div>
+                  <p><b>Mark P. </b>add an image into Worlda</p>
+                  <p>today, 10:30 PM</p>
+                </div>
+              </li>
+              <li class="list__item">
+                <div class="person"></div>
+                <div>
+                  <p><b>Marvin S. </b>add an image into Worlda</p>
+                  <p>today, 10:30 PM</p>
+                </div>
+              </li>
+              <li class="list__item">
+                <div class="person ofline"></div>
+                <div>
+                  <p><b>Sebastian K. </b>add an image into Worlda</p>
+                  <p>today, 10:30 PM</p>
+                </div>
+              </li>
+              <li class="list__item">
+                <div class="person"></div>
+                <div>
+                  <p><b>Philip O. </b>add an image into Worlda</p>
+                  <p>today, 10:30 PM</p>
+                </div>
+              </li>
+              <li class="list__item">
+                <div class="person"></div>
+                <div>
+                  <p><b>Mark P. </b>add an image into Worlda</p>
+                  <p>today, 10:30 PM</p>
+                </div>
+              </li>           
+              <li class="list__item">
+                <div class="person"></div>
+                <div>
+                  <p><b>Mark P. </b>add an image into Worlda</p>
+                  <p>today, 10:30 PM</p>
+                </div>
+              </li>
+              <li class="list__item">
+                <div class="person ofline"></div>
+                <div>
+                  <p><b>Sebastian K. </b>add an image into Worlda</p>
+                  <p>today, 10:30 PM</p>
+                </div>
+              </li>
+              <li class="list__item">
+                <div class="person"></div>
+                <div>
+                  <p><b>Benni I. </b>add an image into Worlda</p>
+                  <p>today, 10:30 PM</p>
+                </div>
+              </li>
+              <li class="list__item">
+                  <div class="person"></div>
+                  <div>
+                    <p><b>Benni I. </b>add an image into Worlda</p>
+                    <p>today, 10:30 PM</p>
+                  </div>
+              </li>
+              <li class="list__item">
+                <div class="person"></div>
+                <div>
+                  <p><b>Benni I. </b>add an image into Worlda</p>
+                  <p>today, 10:30 PM</p>
+                </div>
+              </li>
+              <li class="list__item">
+                <div class="person"></div>
+                <div>
+                  <p><b>Benni I. </b>add an image into Worlda</p>
+                  <p>today, 10:30 PM</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          
+          <div >
+            <button type="button" class="main__btn-unbordered">Activity Archive
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 640 640">
+                <g id="icomoon-ignore">
+                </g>
+                <path d="M297.376 414.4l22.624 22.624 181.024-181.024-45.248-45.248-135.776 135.744-135.776-135.744-45.248 45.248z"></path>
+              </svg>
+            </button>
+          </div>
         </aside>
 
     </div> <!-- container -->
@@ -372,9 +538,9 @@
         </div>
         <div>
           <div class="participants">
-            <div></div>
-            <div></div>
-            <div class="ofline"></div>
+            <div class="person"></div>
+            <div class="person"></div>
+            <div class="person ofline"></div>
           </div>
           <button type="button" class="main__btn-circle">
             +3
@@ -385,7 +551,7 @@
               </g>
               <path d="M0 192h192l-71.765-71.765c36.265-36.263 84.48-56.235 135.765-56.235s99.5 19.972 135.765 56.235c36.263 36.265 56.235 84.48 56.235 135.765s-19.972 99.5-56.235 135.765c-36.265 36.263-84.48 56.235-135.765 56.235s-99.5-19.972-135.764-56.236c-3.028-3.027-5.93-6.146-8.728-9.334l-48.16 42.141c46.923 53.583 115.832 87.429 192.652 87.429 141.385 0 256-114.615 256-256s-114.615-256-256-256c-70.693 0-134.684 28.663-181.008 74.992l-74.992-74.992v192z"></path>
             </svg>
-            today, 13:40pm
+            today, 13:40 pm
           </button>
           <button type="button" class="main__btn-circle">
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 416 448">
@@ -403,12 +569,9 @@
         </div>
         <div>
           <div class="participants">
-            <div></div>
-            <div class="ofline"></div>
+            <div class="person"></div>
+            <div class="person ofline"></div>
           </div>
-          <button type="button" class="main__btn-circle">
-            +3
-          </button>
           <button type="button" class="main__btn">
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 512 512">
               <g id="icomoon-ignore">
@@ -428,6 +591,7 @@
       </li>
     </ul>
   </template>
+  <script type="text/javascript" src="js/simple-scrollbar.js"></script>
   <script src="js/script.js"></script>
 </body>
 

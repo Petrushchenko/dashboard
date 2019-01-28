@@ -1,103 +1,83 @@
 .content {
-   display: flex;
-   justify-content: space-between;
+   display: grid;
+   grid-template-columns: 73% 26%;
+   grid-template-rows: minmax(min-content,1fr) minmax(100px, 815px) 1fr;
+   grid-column-gap: 1%;
+   grid-row-gap: 0;
    width: 100%;
-   height: 100%;
+   height: 100vh;
    border-top: 1px solid $header-borders-color;
    padding: 30px;
    position:relative;
    top: -1px;
-
 }
-
 .list {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    //max-height: 100vh;
-    height: 100%;
+    height: inherit;
     &__item {
         display: flex;
+        flex-direction: column;
     }
     &::-webkit-scrollbar {
       display: none;
     }
 
 }
-.main {
-    width: 73%;
-    border:1px solid $header-borders-color;
-    //position: relative;
-    &__header {
+
+.main-header {
+    height: min-content;
+    grid-column: 1 /span 1;
+    grid-row: 1 /span 1;
+    display: flex;
+    padding: 25px 30px;
+    justify-content: space-between;
+    align-items:center;
+    border: 1px solid $header-borders-color;
+    div {
+        position: relative;
         display: flex;
-        padding: 25px 30px;
-        justify-content: space-between;
-        align-items:center;
-        border-bottom: 1px solid $header-borders-color;
-        div {
+        align-items: center;
+        .btn-sort {
+            @extend %btn;
+            margin-right: 10px;
+            margin-left: 0;
             position: relative;
-            display: flex;
-            align-items: center;
-            .main__btn-sort {
-                @extend %btn;
-                margin-right: 10px;
-                margin-left: 0;
-                position: relative;
-                z-index: 2;
-                span {
-                    font-weight: 100;
-                }
-                svg {
-                    path {
-                        fill: $header-borders-color;
-                    }
-                }
+            z-index: 2;
+            span {
+                font-weight: 100;
             }
             svg {
                 path {
-                    fill: $red-color;
+                    fill: $header-borders-color;
                 }
             }
         }
-        p {
-            @extend %text;
-        }
-        .sort {
-            position: absolute;
-            top: 50%;
-            width: 100%;
-            list-style-type: none;
-            margin: 0;
-            padding-left: 25px;
-            padding-top: 25px;
-            border: 1px solid $header-borders-color;
-            border-top: none;
-            background-color: white;
-            z-index: 1;
-            display: none;
-            li {
-                color: $header-text-color;
-                cursor: pointer;
-                font-size: 1.6rem;
-                padding: 10px;
-                &:hover {
-                    font-weight: 600;
-                }
+        svg {
+            path {
+                fill: $red-color;
             }
         }
     }
-    &.hide {
-        display: none;
+    p {
+        @extend %text;
     }
-    &__list {
-        @extend .list;
-        .list__item {
-            flex-direction: column;
+}
+.main-scroll {
+    grid-column: 1/ span 1;
+    grid-row: 2 / span 1;
+    border-left:  1px solid $header-borders-color;
+    border-right:  1px solid $header-borders-color;
+    .list{
+        &__item {
+
             & > div {
                 @extend %list-item;
+                display: flex;
+                align-items: center;
                 & > div {
                     display: flex;
-                    align-items: center;
                     span {
                         background-color: $red-color;
                         @extend %span;
@@ -107,50 +87,65 @@
                         font-size: 2.2rem;
                     }
                 }
+                
             }
         }
-    }
-    &__btn {
-        @extend %btn;
-        text-transform: uppercase;
-        padding: 12px 15px;
-        &:hover {
-            border-color: $red-color;
+        .btn {
+            @extend %btn;
+            text-transform: uppercase;
+            padding: 12px 15px;
+            &:hover {
+                border-color: $red-color;
+            }
         }
-    }
-    &__btn-circle {
-        @extend %btn;
-        width: 34px;
-        height: 34px;
-        border-radius: 50%;
-        padding:0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        &:hover {
-            border-color: $red-color;
-            background-color: $red-color;
-            svg {
-                path {
-                    fill: white;
+        .btn-circle {
+            @extend %btn;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            padding:0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &:hover {
+                border-color: $red-color;
+                background-color: $red-color;
+                svg {
+                    path {
+                        fill: white;
+                    }
                 }
             }
-        }
-        svg {
-            path {
-                fill: $header-borders-color;
+            svg {
+                path {
+                    fill: $header-borders-color;
+                }
             }
+        
         }
     }
-    &__footer {
-        padding: 25px 30px;
-        border-top: 1px solid $header-borders-color;
-    }
-    &__btn-unbordered{
-        @extend %btn;
-        @extend %btn-unbordered;
+    &.hide {
+        display: none;
     }
 }
+.hide {
+    display: none;
+}
+  
+.btn-unbordered{
+    @extend %btn;
+    @extend %btn-unbordered;
+}    
+.main-footer {
+    grid-row: 3 /span 1;
+    grid-column: 1 / span 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border:1px solid $header-borders-color;
+    width: 100%;
+}
+
 .person {
     width: 33px;
     height: 33px;
@@ -235,18 +230,18 @@
         }
     }
 }
-aside {
-    width: 26%;
+.aside-scroll {
+    grid-column: 2 /span 1;
+    grid-row: 1 / span 2;
     border:1px solid $header-borders-color;
-    display: flex;
-    flex-direction: column;
+    position:relative;
     .list {
-        max-height: 905px;
         li{
             &.list__item {
                 @extend %list-item;
                 justify-content: flex-start;
-                flex-wrap: nowrap;
+                flex-direction: row;
+                flex-wrap: wrap;
                 @each $i in 1,2,3,4 {
                     &:nth-of-type(#{$i}) {
                         .person {
@@ -288,7 +283,7 @@ aside {
                         }       
                     }
                 } 
-                @each $i in 8,9 {
+                @each $i in 8,9, 10, 11 {
                     &:nth-of-type(#{$i}) {
                         .person {
                             width: 42px;
@@ -319,10 +314,14 @@ aside {
                 }
             }
         }
-    }   
-    & > div:not(.scrollContainer) {
-        padding: 25px 30px;
-        border-top: 1px solid $header-borders-color;
+    } 
+}  
+.aside-footer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border:1px solid $header-borders-color;
 
-    }
+    border-top-width: 0;
 }

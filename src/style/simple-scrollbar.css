@@ -1,8 +1,11 @@
 .scrollContainer {
   position: relative;
+  height: 100%;
+  overflow: hidden;
+  /*flex-grow:2;*/
 }
 .scrollable {
-  max-height:100vh;
+  height:100%;
   width: 100%;
   overflow-y: scroll;
 }

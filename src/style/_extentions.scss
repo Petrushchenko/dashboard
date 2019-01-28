@@ -40,6 +40,7 @@
     margin: 0;
 }
 %list-item {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     padding: 30px;
@@ -58,11 +59,15 @@
         display: flex;
         align-items: center;
         margin :0;
-        padding:0;
+       // padding:0;
         svg {
             transform: rotate(-90deg);
             path {
                 fill: $header-borders-color;
             }
+        }
+        &:hover {
+            border-color: $red-color;
+
         }
 }
